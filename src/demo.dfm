@@ -1,0 +1,30 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 290
+  ClientWidth = 554
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ListBox1: TListBox
+    Left = 0
+    Top = 0
+    Width = 554
+    Height = 290
+    Align = alClient
+    ItemHeight = 13
+    TabOrder = 0
+    ExplicitLeft = 208
+    ExplicitTop = 96
+    ExplicitWidth = 121
+    ExplicitHeight = 97
+  end
+end

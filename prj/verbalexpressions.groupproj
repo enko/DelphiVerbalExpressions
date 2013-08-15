@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{FD0A39BA-00EC-450E-AB71-3A010215CB4E}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="verbalexpressiondemo.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="verbalexpressiontests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="verbalexpressiondemo">
+			<MSBuild Projects="verbalexpressiondemo.dproj"/>
+		</Target>
+		<Target Name="verbalexpressiondemo:Clean">
+			<MSBuild Projects="verbalexpressiondemo.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="verbalexpressiondemo:Make">
+			<MSBuild Projects="verbalexpressiondemo.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="verbalexpressiontests">
+			<MSBuild Projects="verbalexpressiontests.dproj"/>
+		</Target>
+		<Target Name="verbalexpressiontests:Clean">
+			<MSBuild Projects="verbalexpressiontests.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="verbalexpressiontests:Make">
+			<MSBuild Projects="verbalexpressiontests.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="verbalexpressiondemo;verbalexpressiontests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="verbalexpressiondemo:Clean;verbalexpressiontests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="verbalexpressiondemo:Make;verbalexpressiontests:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>
