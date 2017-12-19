@@ -35,11 +35,11 @@ type
       function Multiple(astrValue : string) : TVerbalExpression;
       function StartOfLine(aboolEnable : boolean = True) : TVerbalExpression;
       function EndOfLine(aboolEnable : boolean = True) : TVerbalExpression;
-      function _Then(astrValue : string) : TVerbalExpression;
+      function &Then(astrValue : string) : TVerbalExpression;
       function Find(astrValue : string) : TVerbalExpression;
       function Maybe(astrValue : string) : TVerbalExpression;
       function AnythingBut(astrValue : string) : TVerbalExpression;
-      function _Or(astrValue : string) : TVerbalExpression;
+      function &Or(astrValue : string) : TVerbalExpression;
       function Something : TVerbalExpression;
       function SomethingBut(astrValue : string) : TVerbalExpression;
       function LineBreak : TVerbalExpression;
