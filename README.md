@@ -10,9 +10,9 @@ var
 begin
   LobjVerbalExpression := TVerbalExpression.Create
     .StartOfLine()
-    ._Then('http')
+    .Then('http')
     .Maybe('s')
-    ._Then('://')
+    .Then('://')
     .Maybe('www.')
     .anythingBut(' ')
     .endOfLine();
